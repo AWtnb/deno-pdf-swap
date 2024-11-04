@@ -72,7 +72,7 @@ const main = async () => {
         default: {
             path: "",
             embed: "",
-            frompage: "0",
+            frompage: "1",
         },
     });
     if (!existsSync(flags.path)) {
