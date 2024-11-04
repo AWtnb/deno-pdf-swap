@@ -75,6 +75,10 @@ const main = async () => {
             frompage: "1",
         },
     });
+    if (isNaN(Number(flags.frompage))) {
+        console.log("invalid arg:", flags.frompage);
+        Deno.exit(1);
+    }
     if (!existsSync(flags.path)) {
         console.log("target path not found!");
         Deno.exit(1);
